@@ -2,10 +2,10 @@ module Components {
     @ Component to blink an LED driven by a rate group
     active component Led {
 
-        # One async command/port is required for active components
-        # This should be overridden by the developers with a useful command/port
-        @ TODO
-        async command TODO opcode 0
+        @ Command to turn on or off the blinking LED
+        async command BLINKING_ON_OFF(
+            on_off: Fw.On @< Indicates whether the blinking should be on or off
+        )
 
         ##############################################################################
         #### Uncomment the following examples to start customizing your component ####

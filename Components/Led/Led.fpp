@@ -33,6 +33,9 @@ module Components {
         @ Telemetry channel to report LED transistions
         telemetry LedTransitions: U64
 
+        @ Blinking interval in rate group ticks
+        param BLINK_INTERVAL: U32
+
         ##############################################################################
         #### Uncomment the following examples to start customizing your component ####
         ##############################################################################

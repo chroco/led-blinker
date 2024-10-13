@@ -32,6 +32,11 @@ namespace Components {
 
     PRIVATE:
 
+      //! Emit parameter updated EVR
+      //!
+      void parameterUpdated(FwPrmIdType id /*!< The parameter ID*/
+      ) override;
+
       // ----------------------------------------------------------------------
       // Handler implementations for commands
       // ----------------------------------------------------------------------

@@ -36,6 +36,12 @@ module Components {
         @ Blinking interval in rate group ticks
         param BLINK_INTERVAL: U32
 
+        @ Port receiving calls from the rate group
+        sync input port run: Svc.Sched
+
+        @ Port sending calls to the GPIO driver
+        output port gpioSet: Drv.GpioWrite
+
         ##############################################################################
         #### Uncomment the following examples to start customizing your component ####
         ##############################################################################

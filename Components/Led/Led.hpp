@@ -32,6 +32,14 @@ namespace Components {
 
     PRIVATE:
 
+      //! Handler implementation for run
+      //!
+      //! Port receiving calls from the rate group
+      void run_handler(
+          NATIVE_INT_TYPE portNum, //!< The port number
+          NATIVE_UINT_TYPE context //!< The call order
+      ) override;
+
       //! Emit parameter updated EVR
       //!
       void parameterUpdated(FwPrmIdType id /*!< The parameter ID*/

@@ -2,6 +2,11 @@
 
     <import_topology>LedBlinker/Top/LedBlinkerTopologyAppAi.xml</import_topology>
 
+    <packet name="LedChannels" id="8" level="1">
+        <channel name="led.LedTransitions"/>
+        <channel name="led.BlinkingState"/>
+    </packet>
+
     <packet name="CDH" id="1" level="1">
         <channel name="cmdDisp.CommandsDispatched"/>
         <channel name="rateGroup1.RgMaxTime"/>

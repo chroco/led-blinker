@@ -27,6 +27,12 @@ module Components {
             severity activity low \
             format "LED is {}"
 
+        @ Telemetry channel to report blinking state.
+        telemetry BlinkingState: Fw.On
+
+        @ Telemetry channel to report LED transistions
+        telemetry LedTransitions: U64
+
         ##############################################################################
         #### Uncomment the following examples to start customizing your component ####
         ##############################################################################

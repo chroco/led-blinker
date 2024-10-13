@@ -58,8 +58,7 @@ namespace Components {
 
       this->log_ACTIVITY_HI_SetBlinkingState(on_off);
 
-      // TODO: Report the blinking state via a telemetry channel.
-      // NOTE: This telemetry channel will be added during the "Telemetry" exercise.
+      this->tlmWrite_BlinkingState(on_off);
     }
 
     // Provide command response

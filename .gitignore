@@ -8,7 +8,6 @@ build-fprime-*
 *.template.hpp
 
 # Misc
-/fprime/
 /venv/
 /fprime-venv/
 /.idea/

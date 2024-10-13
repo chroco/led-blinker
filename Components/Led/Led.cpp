@@ -44,8 +44,7 @@ namespace Components {
     // Note: isValid is an autogenerate helper function for enums defined in fpp.
     if(!on_off.isValid())
     {
-        // TODO: Add an event that indicates we received an invalid argument.
-        // NOTE: Add this event after going through the "Events" exercise.
+        this->log_WARNING_LO_InvalidBlinkArgument(on_off);
 
         // Update command response with a validation error
         cmdResp = Fw::CmdResponse::VALIDATION_ERROR;
@@ -57,8 +56,7 @@ namespace Components {
       this->blinking = Fw::On::ON == on_off; // Update blinking state
       this->lock.unlock();
 
-      // TODO: Add an event that reports the state we set to blinking.
-      // NOTE: This event will be added during the "Events" exercise.
+      this->log_ACTIVITY_HI_SetBlinkingState(on_off);
 
       // TODO: Report the blinking state via a telemetry channel.
       // NOTE: This telemetry channel will be added during the "Telemetry" exercise.

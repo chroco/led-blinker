@@ -7,6 +7,26 @@ module Components {
             on_off: Fw.On @< Indicates whether the blinking should be on or off
         )
 
+        @ Indicates we received an invalid argument.
+        event InvalidBlinkArgument(badArgument: Fw.On) \
+            severity warning low \
+            format "Invalid Blinking Argument: {}"
+
+        @ Reports the state we set to blinking.
+        event SetBlinkingState(state: Fw.On) \
+            severity activity high \
+            format "Set blinking state to {}."
+
+        @ Indicates the set interval
+        event BlinkIntervalSet(interval: U32) \
+            severity activity high \
+            format "LED blink interval set to {}"
+
+        @ Indicates the LED has been driven to a different state
+        event LedState(on_off: Fw.On) \
+            severity activity low \
+            format "LED is {}"
+
         ##############################################################################
         #### Uncomment the following examples to start customizing your component ####
         ##############################################################################

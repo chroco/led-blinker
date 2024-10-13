@@ -16,6 +16,7 @@ module LedBlinker {
     # Instances used in the topology
     # ----------------------------------------------------------------------
 
+    instance led
     instance $health
     instance blockDrv
     instance tlmSend

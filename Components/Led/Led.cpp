@@ -38,7 +38,8 @@ namespace Components {
   {
     // Read back the parameter value
     Fw::ParamValid isValid;
-    U32 interval = 0; // TODO: Get BLINK_INTERVAL parameter value
+    //U32 interval = 0; // TODO: Get BLINK_INTERVAL parameter value
+    U32 interval = this->paramGet_BLINK_INTERVAL(isValid);
 
     // Force interval to be 0 when invalid or not set
     interval = ((Fw::ParamValid::INVALID == isValid) || (Fw::ParamValid::UNINIT == isValid)) ? 0 : interval;
@@ -65,6 +66,7 @@ namespace Components {
         {
             this->transitions = this->transitions + 1;
             // TODO: Add an channel to report the number of LED transitions (this->transitions)
+            this->tlmWrite_LedTransitions(this->transitions);
 
             // Port may not be connected, so check before sending output
             if (this->isConnected_gpioSet_OutputPort(0))
@@ -73,6 +75,7 @@ namespace Components {
             }
 
             // TODO: Add an event to report the LED state (new_state).
+            this->tlmWrite_NewState(new_state);
             this->state = new_state;
         }
 
@@ -90,6 +93,7 @@ namespace Components {
 
         this->state = Fw::On::OFF;
         // TODO: Add an event to report the LED state (this->state).
+        this->tlmWrite_State(this->state);
       }
     }
   }

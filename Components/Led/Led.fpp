@@ -33,6 +33,12 @@ module Components {
         @ Telemetry channel to report LED transistions
         telemetry LedTransitions: U64
 
+        @ Telemetry channel to report LED new state
+        telemetry NewState: Fw.On
+
+        @ Telemetry channel to report LED state
+        telemetry State: Fw.On
+
         @ Blinking interval in rate group ticks
         param BLINK_INTERVAL: U32
 

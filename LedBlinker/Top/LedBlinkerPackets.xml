@@ -5,6 +5,8 @@
     <packet name="LedChannels" id="8" level="1">
         <channel name="led.LedTransitions"/>
         <channel name="led.BlinkingState"/>
+        <channel name="led.NewState"/>
+        <channel name="led.State"/>
     </packet>
 
     <packet name="CDH" id="1" level="1">

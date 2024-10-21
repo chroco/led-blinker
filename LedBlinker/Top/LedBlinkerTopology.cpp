@@ -133,7 +133,7 @@ void configureTopology() {
     // Allocation identifier is 0 as the MallocAllocator discards it
     comQueue.configure(configurationTable, 0, mallocator);
 
-    bool gpio_success = gpioDriver.open(48, Drv::LinuxGpioDriver::GpioDirection::GPIO_OUT);
+    bool gpio_success = gpioDriver.open(47, Drv::LinuxGpioDriver::GpioDirection::GPIO_OUT);
     if (!gpio_success) {
         Fw::Logger::logMsg("[ERROR] Failed to open GPIO pin\n");
     }

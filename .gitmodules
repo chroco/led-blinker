@@ -1,3 +1,6 @@
 [submodule "fprime"]
 	path = fprime
 	url = git@github.com:nasa/fprime.git
+[submodule "CANopenNode"]
+	path = CANopenNode
+	url = git@github.com:CANopenNode/CANopenNode.git
